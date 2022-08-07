@@ -194,86 +194,86 @@ def set_up_insecticide(cb):
 def configure_node_checkerboard(cb, scenario, start_day=0, coverage=0.8, gap=3*365, biggap=6*365) :
     if scenario == 0:
         scenario_name = 'ITN Rotation with no resistance'
-        add_ITN(cb, start=start_day, coverage_by_ages=[{'min': 0, 'max': 100, 'coverage': coverage}])
-        add_ITN(cb, start=3 * 365, coverage_by_ages=[{'min': 0, 'max': 100, 'coverage': coverage}])
-        add_ITN(cb, start=6 * 365, coverage_by_ages=[{'min': 0, 'max': 100, 'coverage': coverage}])
-        add_ITN(cb, start=9 * 365, coverage_by_ages=[{'min': 0, 'max': 100, 'coverage': coverage}])
+        add_ITN(cb, start=start_day, coverage_by_ages=[{'min': 0, 'max': 100, 'coverage': coverage}], nodeIDs=[1])
+        add_ITN(cb, start=3 * 365, coverage_by_ages=[{'min': 0, 'max': 100, 'coverage': coverage}], nodeIDs=[1])
+        add_ITN(cb, start=6 * 365, coverage_by_ages=[{'min': 0, 'max': 100, 'coverage': coverage}], nodeIDs=[1])
+        add_ITN(cb, start=9 * 365, coverage_by_ages=[{'min': 0, 'max': 100, 'coverage': coverage}], nodeIDs=[1])
     elif scenario == 1:
         scenario_name = "Sequence of Pyrethroid and Pyrethroid-PBO"
         set_up_insecticide(cb)
         add_ITN_age_season(cb, start=start_day, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[2])
         add_ITN_age_season(cb, start=6 * 365, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid-PBO')
+                           insecticide='pyrethroid-PBO', nodeIDs=[2])
     elif scenario == 2:
         scenario_name = "Sequence of Pyrethroid and IG2"
         set_up_insecticide(cb)
         add_ITN_age_season(cb, start=start_day, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[3])
         add_ITN_age_season(cb, start=6 * 365, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='Interceptor G2')
+                           insecticide='Interceptor G2', nodeIDs=[3])
     elif scenario == 3:
         scenario_name = "Rotation of Pyrethroid and Pyrethroid-PBO"
         set_up_insecticide(cb)
         add_ITN_age_season(cb, start=start_day, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[4])
         add_ITN_age_season(cb, start=start_day + gap, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid-PBO')
+                           insecticide='pyrethroid-PBO', nodeIDs=[4])
         add_ITN_age_season(cb, start=6 * 365, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[4])
         add_ITN_age_season(cb, start=9 * 365, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid-PBO')
+                           insecticide='pyrethroid-PBO', nodeIDs=[4])
     elif scenario == 4:
         scenario_name = 'Rotation of Pyrethroid and IG2'
         set_up_insecticide(cb)
         add_ITN_age_season(cb, start=start_day, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[5])
         add_ITN_age_season(cb, start=start_day + gap, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='Interceptor G2')
+                           insecticide='Interceptor G2', nodeIDs=[5])
         add_ITN_age_season(cb, start=start_day + biggap, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[5])
         add_ITN_age_season(cb, start=9 * 365, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='Interceptor G2')
+                           insecticide='Interceptor G2', nodeIDs=[5])
     elif scenario == 5:
         scenario_name = 'Mosaic of Pyrethroid and Pyrethroid-PBO'
         set_up_insecticide(cb)
         add_ITN_age_season(cb, start=start_day, demographic_coverage=0.8, age_dependence=None,
                            ind_property_restrictions=[{"InterventionStatus": "Pyrethroid"}],
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[6])
         add_ITN_age_season(cb, start=start_day, demographic_coverage=0.8, age_dependence=None,
                            ind_property_restrictions=[{"InterventionStatus": "Pyrethroid-PBO"}],
-                           insecticide='pyrethroid-PBO')
+                           insecticide='pyrethroid-PBO', nodeIDs=[6])
     elif scenario == 6:
         scenario_name = 'Mosaic of Pyrethroid and IG2'
         set_up_insecticide(cb)
         add_ITN_age_season(cb, start=start_day, demographic_coverage=0.8, age_dependence=None,
                            ind_property_restrictions=[{"Accessibility": "Pyrethroid"}],
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[7])
         add_ITN_age_season(cb, start=start_day, demographic_coverage=0.8, age_dependence=None,
                            ind_property_restrictions=[{"Accessibility": "Interceptor G2"}],
-                           insecticide='Interceptor G2')
+                           insecticide='Interceptor G2', nodeIDs=[7])
     elif scenario == 7:
         scenario_name = 'Interceptor G2 Rotation'
         set_up_insecticide(cb)
         add_ITN_age_season(cb, start=start_day, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='Interceptor G2')
+                           insecticide='Interceptor G2', nodeIDs=[8])
         add_ITN_age_season(cb, start=start_day + gap, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='Interceptor G2')
+                           insecticide='Interceptor G2', nodeIDs=[8])
         add_ITN_age_season(cb, start=6 * 365, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='Interceptor G2')
+                           insecticide='Interceptor G2', nodeIDs=[8])
         add_ITN_age_season(cb, start=9 * 365, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='Interceptor G2')
+                           insecticide='Interceptor G2', nodeIDs=[8])
     elif scenario == 8:
         scenario_name = 'Pyrethroid Rotation'
         set_up_insecticide(cb)
         add_ITN_age_season(cb, start=start_day, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[9])
         add_ITN_age_season(cb, start=start_day + gap, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[9])
         add_ITN_age_season(cb, start=6 * 365, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[9])
         add_ITN_age_season(cb, start=9 * 365, demographic_coverage=0.8, age_dependence=None,
-                           insecticide='pyrethroid')
+                           insecticide='pyrethroid', nodeIDs=[9])
     else:
         scenario_name = 'scenario not found'
     return {'ITN_coverage': coverage,
