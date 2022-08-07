@@ -1,0 +1,199 @@
+{
+  "Defaults": {
+    "IndividualProperties": [
+      {
+        "Property": "Accessibility",
+        "Values": [
+          "Pyrethroid",
+          "Chlorfenapyr"
+        ],
+        "Initial_Distribution": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "Property": "InterventionStatus",
+        "Values": [
+          "Pyrethroid-PBO",
+          "Chlorfenapyr"
+        ],
+        "Initial_Distribution": [
+          0.5,
+          0.5
+        ]
+      }
+    ],
+    "IndividualAttributes": {
+      "AgeDistributionFlag": 3,
+      "AgeDistribution1": 0.000118,
+      "AgeDistribution2": 0,
+      "PrevalenceDistributionFlag": 1,
+      "PrevalenceDistribution1": 0.1,
+      "PrevalenceDistribution2": 0.2,
+      "SusceptibilityDistributionFlag": 0,
+      "SusceptibilityDistribution1": 1,
+      "SusceptibilityDistribution2": 0,
+      "RiskDistributionFlag": 0,
+      "RiskDistribution1": 1,
+      "RiskDistribution2": 0,
+      "MigrationHeterogeneityDistributionFlag": 0,
+      "MigrationHeterogeneityDistribution1": 1,
+      "MigrationHeterogeneityDistribution2": 0,
+      "MortalityDistribution": {
+        "NumDistributionAxes": 2,
+        "AxisNames": [
+          "gender",
+          "age"
+        ],
+        "AxisUnits": [
+          "male=0,female=1",
+          "years"
+        ],
+        "AxisScaleFactors": [
+          1,
+          365
+        ],
+        "NumPopulationGroups": [
+          2,
+          1
+        ],
+        "PopulationGroups": [
+          [
+            0,
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        "ResultUnits": "annual deaths per 1000 individuals",
+        "ResultScaleFactor": 2.7397260273972604E-06,
+        "ResultValues": [
+          [
+            45
+          ],
+          [
+            45
+          ]
+        ]
+      }
+    },
+    "NodeAttributes": {
+      "AbovePoverty": 0.5,
+      "Airport": 0,
+      "Altitude": 0,
+      "Region": 1,
+      "Seaport": 0,
+      "Urban": 0,
+      "InitialPopulation": 1000,
+      "BirthRate": 0.0001
+    }
+  },
+  "Metadata": {
+    "Author": "idm",
+    "DateCreated": "2022-05-12 11:27:34.803675",
+    "IdReference": "Gridded world grump2.5arcmin",
+    "NodeCount": 9,
+    "Resolution": 30,
+    "Tool": "dtk-tools"
+  },
+  "NodeProperties": [
+    {
+      "Property": "Place",
+      "Values": [
+        "RURAL",
+        "SUBURBAN",
+        "URBAN"
+      ],
+      "Initial_Distribution": [
+        0.7,
+        0.2,
+        0.1
+      ]
+    }
+  ],
+  "Nodes": [
+    {
+      "NodeAttributes": {
+        "InitialPopulation": 200,
+        "Latitude": -8.23333,
+        "Longitude": 36.53333,
+        "BirthRate": 0.02486
+      },
+      "NodeID": 1
+    },
+    {
+      "NodeAttributes": {
+        "InitialPopulation": 200,
+        "Latitude": -8.23333,
+        "Longitude": 36.53333,
+        "BirthRate": 0.02486
+      },
+      "NodeID": 2
+    },
+    {
+      "NodeAttributes": {
+        "InitialPopulation": 200,
+        "Latitude": -8.23333,
+        "Longitude": 36.53333,
+        "BirthRate": 0.02486
+      },
+      "NodeID": 3
+    },
+    {
+      "NodeAttributes": {
+        "InitialPopulation": 200,
+        "Latitude": -8.23333,
+        "Longitude": 36.53333,
+        "BirthRate": 0.02486
+      },
+      "NodeID": 4
+    },
+    {
+      "NodeAttributes": {
+        "InitialPopulation": 200,
+        "Latitude": -8.23333,
+        "Longitude": 36.53333,
+        "BirthRate": 0.02486
+      },
+      "NodeID": 5
+    },
+    {
+      "NodeAttributes": {
+        "InitialPopulation": 200,
+        "Latitude": -8.23333,
+        "Longitude": 36.53333,
+        "BirthRate": 0.02486
+      },
+      "NodeID": 6
+    },
+    {
+      "NodeAttributes": {
+        "InitialPopulation": 200,
+        "Latitude": -8.23333,
+        "Longitude": 36.53333,
+        "BirthRate": 0.02486
+      },
+      "NodeID": 7
+    },
+    {
+      "NodeAttributes": {
+        "InitialPopulation": 200,
+        "Latitude": -8.23333,
+        "Longitude": 36.53333,
+        "BirthRate": 0.02486
+      },
+      "NodeID": 8
+    },
+    {
+      "NodeAttributes": {
+        "InitialPopulation": 200,
+        "Latitude": -8.23333,
+        "Longitude": 36.53333,
+        "BirthRate": 0.02486
+      },
+      "NodeID": 9
+    }
+  ]
+}
